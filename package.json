@@ -1,0 +1,19 @@
+{
+  "name": "sqlite3mou",
+  "version": "1.0.0",
+  "main": "serveur.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "nodejs": "0.0.0",
+    "sqlite3": "^4.0.6",
+    "start": "^5.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
