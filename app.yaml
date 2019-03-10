@@ -14,5 +14,6 @@
 # [START gae_quickstart_yaml]
 runtime: nodejs10
 env_variables:
-  REDIRECT_URL: https://<project ID>.appspot.com/oauth2callback
+  REDIRECT_URL: https://<project ID>.appspot.com/oauth2callbacky
+  
 # [END gae_quickstart_yaml]
