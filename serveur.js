@@ -188,7 +188,11 @@ app.get('/', function(request, response){
         });
     });
         
-   
+   app.get('/formulaire', function(request, response){
+        response.writeHead(200, {'Content-Type': 'text/plain'});
+                response.end('la page "FORMULAIRE" que vous cherchez est en cours de travaux');
+        });
+    
 
 app.listen(3000, function (error) {
   if (!error) console.log('app listening port 3000 Poto TKT ça marche maintenant ;)');
