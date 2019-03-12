@@ -1,28 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
 
- 
-  <title>AV Comics</title>
- <!--<link rel="stylesheet" href="index.css"> -->
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style/style.css" media="all" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <title>AV Comics</title>
+    <!--<link rel="stylesheet" href="index.css"> -->
 </head>
+
 <body>
-<h1>efvevzevaevbevbazrvzevmozevhzelvoebuvlzevizevliube</h1>
-  <div id="container">
-  </div>
-<!--<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>-->
-<form action ="https://3000-dot-6498359-dot-devshell.appspot.com/connexion">
-    <input type="submit" value="connexion" />
-</form>
-<form action="https://3000-dot-6498359-dot-devshell.appspot.com/comics">
-    <input type="submit" value="Comics" />
-</form>
+    <!-- <a href="https://3000-dot-6498359-dot-devshell.appspot.com/"><img src="image/logo2.png" wigth="75px" length="100px"></img></a> -->
+
+
+    <main id="site-content" tabindex="-1" class="_e296pg">
+
+        <section>
+
+            <div class="_g2xyno" data-veloute="landing_page_header">
+                <div>
+                    <header>
+                        <div class="menu">
+                            <ul class="snip1189">
+
+                                <!-- En localhost -->
+
+                                <li class="current"><a href="http://localhost://3000/">Home</a></li>
+                                <li><a href="http://localhost://3000/collection">Fantasy</a></li>
+                                <li><a href="http://localhost://3000/discovery">Sci-fi</a></li>
+                                <li><a href="http://localhost://3000/services">Horror</a></li>
+                                <li><a href="http://localhost://3000/products">One-shot</a></li>
+                                <li><a href="http://localhost://3000/connexion">Superhero</a></li>
+                                <li><a href="http://localhost://3000/basededonees">Base de donées</a></li>
+                                <li><a href="http://localhost://3000/comics">Comics</a></li>
+
+                                                                <li class="current"><a href="http://localhost://3000/">Home</a></li>
+                                <li><a href="https://3000-dot-6498359-dot-devshell.appspot.com/collection">Fantasy GOOGLE</a></li>
+                                <li><a href="https://3000-dot-6498359-dot-devshell.appspot.com/discovery">Sci-fi GOOGLE</a></li>
+                                <li><a href="https://3000-dot-6498359-dot-devshell.appspot.com/services">Horror GOOGLE</a></li>
+                                <li><a href="https://3000-dot-6498359-dot-devshell.appspot.com/products">One-shot GOOGLE</a></li>
+                                <li><a href="https://3000-dot-6498359-dot-devshell.appspot.com/connexion">Superhero GOOGLE</a></li>
+                                <li><a href="https://3000-dot-6498359-dot-devshell.appspot.com/basededonees">Base de donées GOOGLE</a></li>
+                                <li><a href="https://3000-dot-6498359-dot-devshell.appspot.com/comics">Comics GOOGLE</a></li>
+                            </ul>
+                        </div>
+                    </header>
+                </div>
+
+                <div id='searchDiv'>
+                    <h1>AV COMICS</h1>
+
+                    <div id="search_container">
+                        <div id="search_bar">
+                            <input type="text" id="search" placeholder="Rechercher" onkeyup="searchcheck()">
+                        </div>
+                        <div id="result"></div>
+                    </div>
+
+                    <div id="link_to_form">
+                        <p> 
+                            <a href="http://localhost://3000/formulaire">
+                                <i class="fas fa-plus-circle"></i>
+                                Ajouter un comic
+                            </a>
+                        </p>
+                    </div>
+
+                </div>
+
+                    <div id="link_to_form">
+                        <p> 
+                            <a onclick="showform()">
+                                <i class="fas fa-plus-circle"></i>
+                                Ajouter un comic GOOGLE
+                            </a>
+                        </p>
+                    </div>
+                    
+                <div id="dbcontainer"></div>
+
+
+                <div id="form_container">
+                    <form id ="form_id" method="post" action="https://3000-dot-6498359-dot-devshell.appspot.com/basededonees">
+                        <label for="comic_name">Name</label>
+                        <input class="form_input" type="text" id="comic_name" placeholder="Comic_name" name="comic_name">
+                        <label for="number_of_tomes">Number of tomes</label>
+                        <input class="form_input" type="number" id="number_of_tomes" placeholder="Number_of_tomes" name="number_of_tomes">
+                        <label for="next_issue">Next issue</label>
+                        <input class="form_input" type="text" id="next_issue" placeholder="Next_issue" name="next_issue">
+                        <label for="genre_id">Genre</label>
+                        <input class="form_input" type="number" id="genre_id" placeholder="Genre_id" name="genre_id">
+                        <label for="publisher_id">Publisher</label>
+                        <input class="form_input" type="number" id="publisher_id" placeholder="Publisher_id" name="publisher_id">
+                        <label for="writer_id">Writer</label>
+                        <input class="form_input" type="text" id="writer_id" placeholder="Writer" name="write_id">
+                        <label for="artist_id">Artist</label>
+                        <input class="form_input" type="text" id="artist_id" placeholder="Artist_id" name="artist_id">
+                        <label for="state_id">State</label>
+                        <input class="form_input" type="text" id="state_id" placeholder="State_id" name="state_id">
+                        <label for="synopsis_id">Synopsis</label>
+                        <input class="form_input" type="text" id="synopsis_id" placeholder="synopsis" name="synopsis_id">
+                        <label for="img_url">URL Image</label>
+                        <input class="form_input" type="text" id="img_url" placeholder="img_url" name="img_url">
+                        <input class="form_submit" type="submit" id="submit"
+                         value="Envoi" onclick="hideform()">
+                    </form>
+                </div>
 <!--
- <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script> -->
-  <script type="text/javascript" src="js/front.js"></script>
+                <form method="post" action="https://3000-dot-6498359-dot-devshell.appspot.com/basededonees">
+<input type="text" placeholder="Comic_name" name="comic_name">
+<input type="number" placeholder="Number_of_tomes" name="number_of_tomes">
+<input type="text" placeholder="Next_issue" name="next_issue">
+<input type="number" placeholder="Genre_id" name="genre_id">
+<input type="number" placeholder="Publisher_id" name="publisher_id">
+<input type="text" placeholder="Writer" name="write_id">
+<input type="text" placeholder="Artist_id" name="artist_id">
+<input type="text" placeholder="State_id" name="state_id">
+<input type="text" placeholder="synopsis" name="synopsis_id">
+<input type="text" placeholder="img_url" name="img_url">
+   <input type="submit" href ="https://3000-dot-6498359-dot-devshell.appspot.com/" value="Envoi" onclick="hideform()">
+   </form> -->
+
+
+
+                <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+                    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+                <script src="js/front.js"></script>
+
+
 </body>
+
 </html>
