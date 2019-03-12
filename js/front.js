@@ -1,6 +1,6 @@
 console.log($)
 
-
+/*
 $.get('https://3000-dot-6498359-dot-devshell.appspot.com/basededonees', function (afficher) {
   afficher.forEach(function (desks) {
     const div = document.createElement('div');
@@ -9,7 +9,7 @@ $.get('https://3000-dot-6498359-dot-devshell.appspot.com/basededonees', function
     console.log(desks);
     console.table(desks);
   })
-});
+});*/
 
 $.get('https://3000-dot-6498359-dot-devshell.appspot.com/basededonees', function(response) {
     console.log(response[0]);
@@ -119,6 +119,14 @@ function searchcheck() {
       }
     }
   }
+
+  function showform() {
+  document.getElementById("form_container").style.visibility= "visible";
+}
+
+function hideform() {
+  document.getElementById("form_container").style.visibility= "hidden";
+}
 
 /*
  

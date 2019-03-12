@@ -149,10 +149,13 @@ app.get('/', function(request, response){
 app.post('/basededonees', function(req, res) {
   console.log(req.body.comic_name)
   console.log(req.body.writer)
+  console.log(req.body.img_url)
+
+  db.run('INSERT INTO comics (comic_name, number_of_tomes, next_issue, genre_id, publisher_id, writer_id, artist_id, state_id, synopsis_id, img_url) VALUES (?,?,?,?,?,?,?,?,?,?)', req.body.comic_name, parseInt(req.body.number_of_tomes), req.body.next_issue, parseInt(req.body.genre_id), parseInt(req.body.publisher_id), parseInt(req.body.write_id), parseInt(req.body.artist_id), parseInt(req.body.state_id), parseInt(req.body.synopsis_id), req.body.img_url), function (error, data){
   
-  db.run('INSERT INTO comics (comic_name, number_of_tomes, next_issue, genre_id, publisher_id, writer_id, artist_id, state_id, synopsis_id, img_url) VALUES (?,?,?,?,?,?,?,?,?,?)', req.body.comic_name, parseInt(req.body.number_of_tomes), req.body.next_issue, parseInt(req.body.genre_id), parseInt(req.body.publisher_id), parseInt(req.body.writer_id), parseInt(req.body.artist_id), parseInt(req.body.state_id), parseInt(req.body.synopsis_id), req.body.img_url) function (error, data){
-      res.send();
-  });
+  //db.run('INSERT INTO comics (comic_name, number_of_tomes, next_issue, genre_id, publisher_id, writer_id, artist_id, state_id, synopsis_id, img_url) VALUES (?,?,?,?,?,?,?,?,?,?)', req.body.comic_name, parseInt(req.body.number_of_tomes), req.body.next_issue, parseInt(req.body.genre_id), parseInt(req.body.publisher_id), parseInt(req.body.writer_id), parseInt(req.body.artist_id), parseInt(req.body.state_id), parseInt(req.body.synopsis_id), "req.body.img_url"); //, function (error, data){
+      res.send("tout est bon");
+  };
 });
 
     
